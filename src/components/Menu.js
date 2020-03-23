@@ -44,9 +44,12 @@ export default ({ onClick, score }) => {
   return (
     <Wrapper>
       <Score>
-        <White>{score.white}</White> - <Black>{score.black}</Black>
+        <White id="score-white">{score.white}</White> -{" "}
+        <Black id="score-black">{score.black}</Black>
       </Score>
-      <Button onClick={onClick}>Play</Button>
+      <Button id="play" onClick={onClick}>
+        Play
+      </Button>
     </Wrapper>
   )
 }

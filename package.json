@@ -11,7 +11,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "cypress open"
   },
   "dependencies": {
     "gatsby": "^2.19.45",
@@ -22,6 +22,7 @@
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
+    "cypress": "^4.2.0",
     "prettier": "^1.19.1"
   }
 }

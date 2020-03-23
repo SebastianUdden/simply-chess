@@ -44,8 +44,7 @@ const Cell = styled.div`
   width: 100%;
   min-width: 40px;
   min-height: 45px;
-  background-color: ${p => (p.colored ? "#555" : "#262626")};
-  /* border: ${p => (p.selected ? "1px solid orange" : "none")}; */
+  background-color: ${p => p.color};
   color: #ccc;
   opacity: 0.9;
   :hover {
@@ -53,19 +52,36 @@ const Cell = styled.div`
     opacity: 1;
     background-color: #bb8034;
   }
+  :active {
+    background-color: #794013;
+  }
 `
 
 const Image = styled.img`
   width: 35px;
 `
 
-export default ({ cell, number, isEvenRow, onClick }) => {
-  const isEvenCell = number % 2 === 0
+const getColor = (row, cell) => {
+  const isEvenRow = row.name % 2 === 0
+  const isEvenCell = cell.number % 2 === 0
+  if (cell.selected) {
+    console.log("HERE!")
+    return "#794013"
+  }
+  if ((isEvenRow && isEvenCell) || (!isEvenRow && !isEvenCell)) {
+    return "#262626"
+  }
+  return "#555"
+}
+
+export default ({ row, cell, onClick }) => {
+  const isSelected = cell.selected ? "isSelected" : ""
   return (
     <Cell
-      colored={(isEvenRow && isEvenCell) || (!isEvenRow && !isEvenCell)}
-      selected={cell.selected}
+      id={cell.name + row.name}
+      color={getColor(row, cell)}
       onClick={onClick}
+      data-cy={isSelected}
     >
       {cell.symbol && (
         <Image src={getChessPiece(cell.symbol)} alt={cell.symbol.type} />

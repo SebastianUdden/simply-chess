@@ -70,9 +70,13 @@ export default ({ playerTurn, onPlayerMove, onClose }) => {
       }
       const symbol = validPosition ? selectedPiece : cell.symbol
       if (cellMatches(newSelection, cell, row)) {
+        const selected = validPosition ? false : true
+        if (selected) {
+          console.log(cell)
+        }
         return {
           ...cell,
-          selected: validPosition ? false : true,
+          selected: selected && cell.symbol && cell.symbol.color === playerTurn,
           symbol,
         }
       }
@@ -93,12 +97,10 @@ export default ({ playerTurn, onPlayerMove, onClose }) => {
       })),
     })
     if (validPosition) {
-      console.log({ selectedCell })
       onPlayerMove(selectedCell.cell.symbol.color)
       setSelectedCell(DEFAULT_SELECTED)
       return
     }
-    console.log({ newSelection })
     if (
       newSelection.cell &&
       newSelection.cell.symbol &&
@@ -121,25 +123,20 @@ export default ({ playerTurn, onPlayerMove, onClose }) => {
         ))}
         <Title></Title>
       </Row>
-      {board.rows.map(row => {
-        const isEvenRow = row.name % 2 === 0
-        return (
-          <Row key={row.name}>
-            <Title>{row.name}</Title>
-            {row.cells.map((cell, index) => (
-              <Cell
-                key={row.name + cell.name}
-                cell={cell}
-                number={index + 1}
-                rowName={row.name}
-                isEvenRow={isEvenRow}
-                onClick={() => handleSelectCell({ row: row.name, cell })}
-              />
-            ))}
-            <Title></Title>
-          </Row>
-        )
-      })}
+      {board.rows.map(row => (
+        <Row key={row.name}>
+          <Title>{row.name}</Title>
+          {row.cells.map(cell => (
+            <Cell
+              key={row.name + cell.name}
+              cell={cell}
+              row={row}
+              onClick={() => handleSelectCell({ row: row.name, cell })}
+            />
+          ))}
+          <Title></Title>
+        </Row>
+      ))}
       <Row>
         <Title></Title>
         {board.rows.map(row => (

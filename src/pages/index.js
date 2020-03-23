@@ -66,7 +66,9 @@ export default () => {
               's turn
             </WrapWord>
           </Turn>
-          <Button onClick={() => setShowChessBoard(false)}>Quit</Button>
+          <Button id="quit" onClick={() => setShowChessBoard(false)}>
+            Quit
+          </Button>
         </>
       )}
       {!showChessBoard && (
