@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import Board from "../components/Board"
 import Menu from "../components/Menu"
+import Turn, { WrapWord } from "../components/Turn"
 
 const Container = styled.div`
   margin: 0 auto;
@@ -9,15 +10,6 @@ const Container = styled.div`
   max-width: 500px;
   max-height: 500px;
   text-align: center;
-`
-const Turn = styled.h2`
-  text-align: center;
-`
-const WrapWord = styled.span`
-  border-bottom: 1px solid ${p => p.color};
-`
-const Color = styled.strong`
-  color: ${p => p.color};
 `
 const H1 = styled.h1`
   color: #fefefe;
@@ -58,14 +50,7 @@ export default () => {
               setScore({ ...score, [winner]: score[winner] + 1 })
             }}
           />
-          <Turn>
-            <WrapWord color={playerTurn}>
-              <Color color={playerTurn}>
-                {playerTurn === "white" ? "White" : "Black"}
-              </Color>
-              's turn
-            </WrapWord>
-          </Turn>
+          <Turn playerTurn={playerTurn} />
           <Button id="quit" onClick={() => setShowChessBoard(false)}>
             Quit
           </Button>
