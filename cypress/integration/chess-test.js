@@ -64,7 +64,13 @@ describe("Play a game of chess", () => {
       cy.get(`#${pos1}`).click()
       cy.get(`#${pos2}`).click()
     })
+  it(`Check that White starts`, () => {
+    cy.get(`#playerTurn`).should("have.text", "White")
+  })
   moveChessPiece(W, "pawn", "D2", "D4")
+  it(`Check that Black is next`, () => {
+    cy.get(`#playerTurn`).should("have.text", "Black")
+  })
   moveChessPiece(B, "pawn", "D7", "D5")
   moveChessPiece(W, "pawn", "E2", "E3")
   moveChessPiece(B, "knight", "B8", "C6")
