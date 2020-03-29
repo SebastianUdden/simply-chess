@@ -1,8 +1,8 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled from "styled-components"
 import { CHESS_BOARD, CHESS_COLUMNS } from "../constants/chessBoard"
 import { MOVEMENT_PATTERN } from "../constants/movementPattern"
-import { checkIsValid } from "../utils/validateMovement"
+import { checkIsValid, showPossibleMoves } from "../utils/validateMovement"
 import Cell from "./Cell"
 
 const Board = styled.div`
@@ -41,7 +41,7 @@ const isEnemy = (clickedPiece, selectedPiece) =>
   selectedPiece.color !== clickedPiece.color
 
 const cellMatches = (selection, cell, row) =>
-  row.name === selection.row && cell.name === selection.cell.name
+  row.number === selection.row && cell.name === selection.cell.name
 
 const DEFAULT_SELECTED = {
   row: "",
@@ -71,9 +71,6 @@ export default ({ playerTurn, onPlayerMove, onClose }) => {
       const symbol = validPosition ? selectedPiece : cell.symbol
       if (cellMatches(newSelection, cell, row)) {
         const selected = validPosition ? false : true
-        if (selected) {
-          console.log(cell)
-        }
         return {
           ...cell,
           selected: selected && cell.symbol && cell.symbol.color === playerTurn,
@@ -112,6 +109,12 @@ export default ({ playerTurn, onPlayerMove, onClose }) => {
     }
   }
 
+  useEffect(() => {
+    if (!board) return
+    if (!selectedCell) return
+    setBoard(showPossibleMoves(selectedCell, board, MOVEMENT_PATTERN))
+  }, [selectedCell])
+
   return (
     <Board>
       <Row>
@@ -124,14 +127,14 @@ export default ({ playerTurn, onPlayerMove, onClose }) => {
         <Title></Title>
       </Row>
       {board.rows.map(row => (
-        <Row key={row.name}>
-          <Title>{row.name}</Title>
+        <Row key={row.number}>
+          <Title>{row.number}</Title>
           {row.cells.map(cell => (
             <Cell
-              key={row.name + cell.name}
+              key={row.number + cell.name}
               cell={cell}
               row={row}
-              onClick={() => handleSelectCell({ row: row.name, cell })}
+              onClick={() => handleSelectCell({ row: row.number, cell })}
             />
           ))}
           <Title></Title>
@@ -140,7 +143,7 @@ export default ({ playerTurn, onPlayerMove, onClose }) => {
       <Row>
         <Title></Title>
         {board.rows.map(row => (
-          <Title key={row.name}></Title>
+          <Title key={row.number}></Title>
         ))}
         <Title></Title>
       </Row>

@@ -36,12 +36,13 @@ export const CHESS_COLUMNS = [
 export const CHESS_BOARD = {
   rows: [
     {
-      name: 1,
+      number: 1,
       cells: [
         {
           name: "A",
           number: 1,
           selected: false,
+          available: true,
           symbol: {
             id: "A1",
             type: "tower",
@@ -52,6 +53,7 @@ export const CHESS_BOARD = {
           name: "B",
           number: 2,
           selected: false,
+          available: true,
           symbol: {
             id: "B1",
             type: "knight",
@@ -121,7 +123,7 @@ export const CHESS_BOARD = {
       ],
     },
     {
-      name: 2,
+      number: 2,
       cells: [
         {
           name: "A",
@@ -206,23 +208,23 @@ export const CHESS_BOARD = {
       ],
     },
     {
-      name: 3,
+      number: 3,
       cells: CHESS_COLUMNS,
     },
     {
-      name: 4,
+      number: 4,
       cells: CHESS_COLUMNS,
     },
     {
-      name: 5,
+      number: 5,
       cells: CHESS_COLUMNS,
     },
     {
-      name: 6,
+      number: 6,
       cells: CHESS_COLUMNS,
     },
     {
-      name: 7,
+      number: 7,
       cells: [
         {
           name: "A",
@@ -307,7 +309,7 @@ export const CHESS_BOARD = {
       ],
     },
     {
-      name: 8,
+      number: 8,
       cells: [
         {
           name: "A",

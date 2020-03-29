@@ -1,31 +1,37 @@
-const filterAndCheck = (cells, first, second) =>
+export const filterAndCheckForObstacle = (cells, first, second) =>
+  cells &&
   !cells
     .filter(cell => cell.number > first && cell.number < second)
     .some(cell => cell.symbol)
 
-const checkForObstaclesX = (y, x1, x2, board) => {
-  const cells = board.rows.find(row => row.name === y).cells
-  return x1 < x2 ? filterAndCheck(cells, x1, x2) : filterAndCheck(cells, x2, x1)
+export const checkForObstacles = (cells, first, second) =>
+  first < second
+    ? filterAndCheckForObstacle(cells, first, second)
+    : filterAndCheckForObstacle(cells, second, first)
+
+export const checkForObstaclesX = (y, x1, x2, board) => {
+  const cells = board.rows.find(row => row.number === y).cells
+  return checkForObstacles(cells, x1, x2)
 }
 
-const checkForObstaclesY = (x, y1, y2, board) => {
+export const checkForObstaclesY = (x, y1, y2, board) => {
   const cells = board.rows.map(row => ({
     ...row.cells.find(cell => cell.number === x),
-    number: row.name,
+    number: row.number,
   }))
-  return y1 < y2 ? filterAndCheck(cells, y1, y2) : filterAndCheck(cells, y2, y1)
+  return checkForObstacles(cells, y1, y2)
 }
 
-const filterAndCheckDiagonal = ({ rows, x1, x2, y1, y2, add, up }) => {
+export const filterAndCheckDiagonal = ({ rows, x1, x2, y1, y2, add, up }) => {
   const filteredRows = rows
-    .filter(row => row.name > y1 && row.name < y2)
+    .filter(row => row.number > y1 && row.number < y2)
     .map(row => ({
       ...row,
       cells: row.cells.filter(cell => cell.number > x1 && cell.number < x2),
     }))
   const cells = (up ? filteredRows : filteredRows.reverse()).map(
     (row, index) => ({
-      number: row.name,
+      number: row.number,
       ...row.cells.find(
         cell => cell.number === (add ? x1 + index + 1 : x2 - (index + 1))
       ),
@@ -34,7 +40,7 @@ const filterAndCheckDiagonal = ({ rows, x1, x2, y1, y2, add, up }) => {
   return !cells.some(cell => cell.symbol)
 }
 
-const checkForObstaclesDiagonal = (x1, x2, y1, y2, board) => {
+export const checkForObstaclesDiagonal = (x1, x2, y1, y2, board) => {
   if (y1 < y2 && x1 < x2) {
     return filterAndCheckDiagonal({
       rows: board.rows,
@@ -60,8 +66,8 @@ const checkForObstaclesDiagonal = (x1, x2, y1, y2, board) => {
   if (y2 < y1 && x1 < x2) {
     return filterAndCheckDiagonal({
       rows: board.rows,
-      x1: x1,
-      x2: x2,
+      x1,
+      x2,
       y1: y2,
       y2: y1,
       add: true,
@@ -82,15 +88,15 @@ const checkForObstaclesDiagonal = (x1, x2, y1, y2, board) => {
   return false
 }
 
-const checkStraightLength = (diff, length) => Math.abs(diff) <= length
+export const checkStraightLength = (diff, length) => Math.abs(diff) <= length
 
-const checkDiagonalLength = (diffX, diffY, length) => {
+export const checkDiagonalLength = (diffX, diffY, length) => {
   const absDiffX = Math.abs(diffX)
   const absDiffY = Math.abs(diffY)
   return absDiffX === absDiffY && absDiffX <= length
 }
 
-const checkKnightMovement = (diffX, diffY) => {
+export const checkKnightMovement = (diffX, diffY) => {
   const absDiffX = Math.abs(diffX)
   const absDiffY = Math.abs(diffY)
   return (
@@ -98,7 +104,15 @@ const checkKnightMovement = (diffX, diffY) => {
   )
 }
 
-const checkPawnMovement = ({ y1, y2, x1, x2, color, newSymbol, board }) => {
+export const checkPawnMovement = ({
+  y1,
+  y2,
+  x1,
+  x2,
+  color,
+  newSymbol,
+  board,
+}) => {
   const isWhite = color === "white"
   const isEmpty = typeof newSymbol == "undefined"
   const isEnemy = !isEmpty && newSymbol.color !== color
@@ -108,7 +122,7 @@ const checkPawnMovement = ({ y1, y2, x1, x2, color, newSymbol, board }) => {
     if (isWhite) {
       if (y1 === 2 && diffY === -2) {
         const boardCell = board.rows
-          .find(row => row.name === y1 + 1)
+          .find(row => row.number === y1 + 1)
           .cells.find(cell => cell.number === x1)
         return !boardCell.symbol
       }
@@ -125,6 +139,7 @@ const checkPawnMovement = ({ y1, y2, x1, x2, color, newSymbol, board }) => {
 }
 
 export const checkIsValid = (newSelection, selectedCell, board, pattern) => {
+  if (!selectedCell) return false
   const {
     row: y1,
     cell: { symbol, number: x1 },
@@ -134,6 +149,7 @@ export const checkIsValid = (newSelection, selectedCell, board, pattern) => {
     cell: { symbol: newSymbol, number: x2 },
   } = newSelection
   if (!symbol) return false
+  if (newSymbol && newSymbol.color === symbol.color) return false
   const { directions, length } = pattern[symbol.type]
   const isStraight = directions.some(direction => direction === "straight")
   const isDiagonal = directions.some(direction => direction === "diagonal")
@@ -173,3 +189,20 @@ export const checkIsValid = (newSelection, selectedCell, board, pattern) => {
   }
   return false
 }
+
+export const showPossibleMoves = (selectedCell, board, pattern) => ({
+  rows: board.rows.map(row => {
+    return {
+      number: row.number,
+      cells: row.cells.map(cell => {
+        const available = checkIsValid(
+          { row: row.number, cell },
+          selectedCell,
+          board,
+          pattern
+        )
+        return { ...cell, available }
+      }),
+    }
+  }),
+})
