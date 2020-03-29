@@ -11,7 +11,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "cypress open"
+    "test": "cypress open",
+    "test:unit": "jest"
   },
   "dependencies": {
     "gatsby": "^2.19.45",
@@ -22,7 +23,12 @@
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
+    "babel-jest": "^25.2.3",
+    "babel-preset-gatsby": "^0.3.1",
     "cypress": "^4.2.0",
-    "prettier": "^1.19.1"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^25.2.3",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "^16.13.1"
   }
 }
