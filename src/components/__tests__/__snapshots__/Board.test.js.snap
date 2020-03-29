@@ -1,0 +1,828 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Board renders correctly 1`] = `
+<div
+  className="sc-AxiKw kFENUr"
+>
+  <div
+    className="sc-AxhCb fyhQQo"
+  >
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+    <div
+      className="sc-AxhUy ixzmtH"
+    >
+      A
+    </div>
+    <div
+      className="sc-AxhUy ixzmtH"
+    >
+      B
+    </div>
+    <div
+      className="sc-AxhUy ixzmtH"
+    >
+      C
+    </div>
+    <div
+      className="sc-AxhUy ixzmtH"
+    >
+      D
+    </div>
+    <div
+      className="sc-AxhUy ixzmtH"
+    >
+      E
+    </div>
+    <div
+      className="sc-AxhUy ixzmtH"
+    >
+      F
+    </div>
+    <div
+      className="sc-AxhUy ixzmtH"
+    >
+      G
+    </div>
+    <div
+      className="sc-AxhUy ixzmtH"
+    >
+      H
+    </div>
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+  </div>
+  <div
+    className="sc-AxhCb fyhQQo"
+  >
+    <div
+      className="sc-AxhUy gKCKPz"
+    >
+      1
+    </div>
+    <div
+      className="sc-AxjAm fNZKtw"
+      color="#113111"
+      data-cy=""
+      id="A1"
+      onClick={[Function]}
+    >
+      <img
+        alt="tower"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm ekbssn"
+      color="#114111"
+      data-cy=""
+      id="B1"
+      onClick={[Function]}
+    >
+      <img
+        alt="knight"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="C1"
+      onClick={[Function]}
+    >
+      <img
+        alt="runner"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="D1"
+      onClick={[Function]}
+    >
+      <img
+        alt="queen"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="E1"
+      onClick={[Function]}
+    >
+      <img
+        alt="king"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="F1"
+      onClick={[Function]}
+    >
+      <img
+        alt="runner"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="G1"
+      onClick={[Function]}
+    >
+      <img
+        alt="knight"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="H1"
+      onClick={[Function]}
+    >
+      <img
+        alt="tower"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+  </div>
+  <div
+    className="sc-AxhCb fyhQQo"
+  >
+    <div
+      className="sc-AxhUy gKCKPz"
+    >
+      2
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="A2"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="B2"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="C2"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="D2"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="E2"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="F2"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="G2"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="H2"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+  </div>
+  <div
+    className="sc-AxhCb fyhQQo"
+  >
+    <div
+      className="sc-AxhUy gKCKPz"
+    >
+      3
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="A3"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="B3"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="C3"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="D3"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="E3"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="F3"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="G3"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="H3"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+  </div>
+  <div
+    className="sc-AxhCb fyhQQo"
+  >
+    <div
+      className="sc-AxhUy gKCKPz"
+    >
+      4
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="A4"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="B4"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="C4"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="D4"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="E4"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="F4"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="G4"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="H4"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+  </div>
+  <div
+    className="sc-AxhCb fyhQQo"
+  >
+    <div
+      className="sc-AxhUy gKCKPz"
+    >
+      5
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="A5"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="B5"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="C5"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="D5"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="E5"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="F5"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="G5"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="H5"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+  </div>
+  <div
+    className="sc-AxhCb fyhQQo"
+  >
+    <div
+      className="sc-AxhUy gKCKPz"
+    >
+      6
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="A6"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="B6"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="C6"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="D6"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="E6"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="F6"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="G6"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="H6"
+      onClick={[Function]}
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+  </div>
+  <div
+    className="sc-AxhCb fyhQQo"
+  >
+    <div
+      className="sc-AxhUy gKCKPz"
+    >
+      7
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="A7"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="B7"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="C7"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="D7"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="E7"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="F7"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="G7"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="H7"
+      onClick={[Function]}
+    >
+      <img
+        alt="pawn"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+  </div>
+  <div
+    className="sc-AxhCb fyhQQo"
+  >
+    <div
+      className="sc-AxhUy gKCKPz"
+    >
+      8
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="A8"
+      onClick={[Function]}
+    >
+      <img
+        alt="tower"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="B8"
+      onClick={[Function]}
+    >
+      <img
+        alt="knight"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="C8"
+      onClick={[Function]}
+    >
+      <img
+        alt="runner"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="D8"
+      onClick={[Function]}
+    >
+      <img
+        alt="queen"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="E8"
+      onClick={[Function]}
+    >
+      <img
+        alt="king"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="F8"
+      onClick={[Function]}
+    >
+      <img
+        alt="runner"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm OnsRP"
+      color="#555"
+      data-cy=""
+      id="G8"
+      onClick={[Function]}
+    >
+      <img
+        alt="knight"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxjAm bbaRbW"
+      color="#262626"
+      data-cy=""
+      id="H8"
+      onClick={[Function]}
+    >
+      <img
+        alt="tower"
+        className="sc-AxirZ huvrLf"
+        src="test-file-stub"
+      />
+    </div>
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+  </div>
+  <div
+    className="sc-AxhCb fyhQQo"
+  >
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+    <div
+      className="sc-AxhUy gKCKPz"
+    />
+  </div>
+</div>
+`;

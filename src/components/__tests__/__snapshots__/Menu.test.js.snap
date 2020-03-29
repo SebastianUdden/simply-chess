@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu renders correctly 1`] = `
+<div
+  className="sc-AxjAm lcVokx"
+>
+  <p
+    className="sc-AxiKw dsXsSA"
+  >
+    <strong
+      className="sc-AxhCb cEzvRj"
+      id="score-white"
+    >
+      0
+    </strong>
+     -
+     
+    <strong
+      className="sc-AxhUy tHwye"
+      id="score-black"
+    >
+      0
+    </strong>
+  </p>
+  <button
+    className="sc-AxirZ kLfxfB"
+    id="play"
+    onClick={[Function]}
+  >
+    Play
+  </button>
+</div>
+`;

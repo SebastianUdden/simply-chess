@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Turn renders correctly 1`] = `
+<h2
+  className="sc-AxjAm jWlVxK"
+>
+  <span
+    className="sc-AxirZ gfQzQh"
+    color="white"
+  >
+    <strong
+      className="sc-AxiKw gEgewe"
+      color="white"
+      id="playerTurn"
+    >
+      White
+    </strong>
+    's turn
+  </span>
+</h2>
+`;
